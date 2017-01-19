@@ -1,0 +1,321 @@
+/*Style.css for SVNIT MAP Application
+Made By - ApTr13*/
+/* CSS for primary tags and headings*/
+* {
+	box-sizing:border-box;
+	font-family: 'Space Mono', monospace;
+	color: white;
+}
+body {
+	background-color: #474747;
+}
+h1,h3{
+	text-align:center;
+}
+h3{
+	margin: 5px;
+	margin-bottom: 10px;
+}
+h4,p{
+	text-align: center;
+	margin: 2px;
+	color: black;
+}
+ul li{
+	list-style: none;
+	cursor: pointer;
+	line-height: 20px;
+}
+hr{
+	border: 1px solid white;
+	height: 0px;
+}
+.locsearch{
+	color: black;
+	width: 160px;
+	margin-left: 10px;
+}
+.find{
+	color: #85E7FF;
+	border: 3px solid #85E7FF;
+	background-color: #474747;
+}
+/*CSS for all API divisions*/
+.goibibo,.wikipedia,.markerlist{
+	height: 315px;
+	border: 4px solid #FF940A;
+	border-radius: 30px;
+    box-shadow: 4px 4px 4px white;
+    z-index: 999;
+}
+.goibibo ul{
+	padding-left: 5px;
+}
+
+.hotelbox{
+	border: 2px solid #CBFCD3;
+	height: 70px;
+	margin-left: 0px;
+	margin-bottom: 5px;
+	padding: 0px;
+	vertical-align: center;
+}
+.hotelbox{
+	padding: 0px;
+	border-radius: 3px;
+}
+.hotelbox a{
+	padding: 0px;
+	padding-left: 10px;
+	padding-top: 5px;
+}
+a{
+	color: #85E7FF;
+}
+a:hover{
+	text-decoration: none;
+	color: #A9B3FF;
+}
+.hotelpic{
+	position: relative;
+	left: 4%;
+	top: 12%;
+	width: 50px;
+	height:50px;
+	border-radius: 25px;
+	border: 2px solid white;
+	padding: 0px;
+}
+.goibibo{
+	overflow: hidden;
+}
+.goibibo:hover{
+	overflow-y: scroll;
+}
+.markerlist{
+	height: 480px;
+}
+.info_img{
+	width: 200px;
+	margin:0 auto;
+}
+.infolinks{
+	color: #01B394;
+}
+#content{
+	width:300px;
+}
+#map{
+    height: 480px;
+    border-radius: 30px;
+    border: 5px solid #F9ECEC;
+}
+#marker-links{
+	padding-left: 3px;
+}
+#marker-links li{
+	padding-left: 5px;
+	color: #FEEED5;
+}
+p.col-md-2, .hotelprice{
+	padding:0px;
+	color: white;
+}
+.api_img{
+	width: 100%;
+}
+/*Footer Section*/
+.developer div{
+	background-color: white;
+}
+.icon {
+	color: white;
+	position: relative;
+	top: 10px;
+	display: inline-block;
+	background-size: 100%;
+	width: 30px;
+	height: 30px;
+	text-indent: -999em;
+	text-align: left;
+	-moz-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	-webkit-box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	box-shadow: 0 1px 0 rgba(0, 0, 0, 0.5);
+	-moz-border-radius: 5px;
+	-webkit-border-radius: 5px;
+	border-radius: 5px;
+	margin-bottom: 5px; 
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.courtesy{
+	border-right: 2px solid white;
+}
+.developer-links{
+	height: 60px;
+	border-radius: 20px;
+	margin: 0 auto;
+}
+.facebook {
+	background: url("social-1_logo-facebook.svg"); 
+}
+.github {
+	background: url("social-1_logo-github.svg"); 
+}
+.insta {
+	background: url("social-1_logo-instagram.svg"); 
+}
+.gmail {
+	background: url("gmail.png"); 
+  opacity: 0.8;
+}
+.website{
+	display: inline;
+	top: 10px;
+	color: white;
+	text-decoration: none;
+	font-size: 20px;
+	background-color: #474747;
+	border-radius: 5px;
+	margin-bottom: 5px; 
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.website:hover{
+	color: white;
+	text-decoration: none;
+}
+/*Formatting the Scrollbar*/
+::-webkit-scrollbar {
+    width: 12px;
+    z-index: -99;
+    opacity: 0;
+}
+::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+    -webkit-border-radius: 10px;
+    opacity: z-index: -99;
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+    -webkit-border-radius: 10px;
+    border-radius: 10px;
+    background: #E0E0E0; 
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
+}
+::-webkit-scrollbar-thumb:window-inactive {
+	background: #E0E0E0; 
+}
+
+@media only screen and (max-width : 1200px) {
+	*{
+		font-size: 12px;
+	}
+	#marker-links li a{
+		font-size: 12px;
+	}
+	.locsearch{
+		width: 120px;
+	}
+	h3{
+		font-size: 20px;
+	}
+	.hotelpic{
+		width: 40px;
+		height:40px;
+		border-radius: 20px;
+	}
+	#wikipedia-links{
+		padding-left: 24px;
+	}
+}
+
+@media only screen and (max-width : 992px) {
+	*{
+		font-size: 11px;
+	}
+	.container{
+		width: 730px;
+	}
+	.courtesy{
+		border-bottom: 2px solid white;
+		border-right: 0px ;
+		padding-bottom: 15px;
+	}
+	.developer{
+		padding-bottom: 5px;
+		padding-top: 5px;
+	}
+
+}
+
+@media only screen and (max-width : 768px) {
+	*{
+		font-size: 12px;
+	}
+	.container{
+		width: 500px;
+	}
+	.markerlist,.wikipedia{
+		margin-bottom: 20px;
+	}
+	.wikipedia{
+		max-height: 250px;
+	}
+	form{
+		margin: 0 auto;
+	}
+	#marker-links li{
+		width: 49%;
+		margin: 0px;
+		display: inline-block;
+	}
+	.markerlist{
+		height: 300px;
+	}
+		
+}
+
+@media only screen and (max-width : 500px) {
+	.container{
+		width: 350px;
+	}
+	.markerlist{
+		min-height: 100px;
+		overflow-y: scroll;
+	}
+	#marker-links li{
+		width: 99%;
+		margin: 0px;
+		display: inline-block;
+		padding-left: 15px;
+	}
+	.wikipedia{
+		min-height: 80px;
+		overflow-y: scroll;
+		overflow-x: hidden;
+	}
+	.wikipedia li{
+		padding-left: 15px;
+	}
+	.hotelbox{
+		width: 95%;
+		margin: 0px auto;
+	}
+	.hotelpic{
+		width: 50px;
+		height: 50px;
+		border-radius: 25px;
+	}
+	.courtesy div{
+		width: 100%;
+		margin-bottom: 10px;
+	}
+	.developer-links{
+		height: 100px;
+	}
+	#content{
+		width:200px;
+	}
+}
