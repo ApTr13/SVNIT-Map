@@ -1,0 +1,110 @@
+<!-- index.html for SVNIT MAP Application By ApTr13. -->
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>SVNIT Map</title>
+		<!-- Integrating all CSS files. -->
+		<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+		<!-- Defining character encoding. -->
+		<meta charset="utf-8">
+	</head>
+	<body>
+	<div class="container">
+	    <h1>MAP OF SVNIT</h1>
+
+	   	<!-- Division having the list of loacations with filter function. -->
+	    <div class="col-lg-3 col-md-3 col-sm-4 col-xs-12" id="marker_list">
+		    <div class="markerlist">
+		    	<h3>Filter Locations</h3>
+		    	<form data-bind="submit: filterlocations">
+		    		<input class="locsearch" type="text" id="filterinput" name="locsearch" data-bind="textInput: locsearch">
+		    		<input class="find" type="submit" value="Find">
+		    	</form>
+		    	<ul id = "marker-links" data-bind="foreach: filterList">
+		    		<li data-bind="text: name, click: $parent.changemarker"></li>
+		    	</ul>
+		    </div>
+	    </div>
+
+		<!-- Google Map rendering all the locations with their concerned data. -->
+	    <div class="col-lg-9 col-md-9 col-sm-8 col-xs-12" id="map">
+		    <script async defer
+		    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-waiVUw0u94MCwGRDC3Bu1ll3jP0Kd-k&callback=initMap">
+		    </script>
+	    </div>
+		
+		<!-- Horizontal Line Break -->
+	    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	    	<hr>
+	    </div>
+
+		<!-- List of all Wikipedia Links related to Surat. -->
+		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
+			<div class="wikipedia">
+				<h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
+				<ul class="row" id = "wikipedia-links"></ul>
+			</div>
+		</div>
+
+		<!-- List of all Hotels in Surat City, courtesy of GoIbibo. -->
+		<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 goibibo">
+			<h3 id="goibibo-header">Hotels Suggestions By GoIbibo</h3>
+			<ul class="row" id="goibibo-links"></ul>
+		</div>
+
+		<!-- Horizontal Line Break.. -->
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	    	<hr>
+	    </div>
+
+		<!-- Footer Section -->
+	    <div class="footer col-lg-12 col-md-12 col-xs-12">
+	    	<!-- Links to all API providers. -->
+	    	<div class="courtesy col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	    		<h3>API Courtesies</h3>
+	    		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+	    			<a href="https://maps.google.com/" target="_blank">
+		    			<img class="api_img" src="images/gmap.jpg" alt="Google Mapsimage">
+	    			</a>
+	    		</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		    		<a href="https://en.wikipedia.org/" target="_blank">
+		    			<img class="api_img" src="images/wiki.jpg" alt="Wikipedia image">
+		    		</a>
+	    		</div>
+	    		<div class="col-lg-4 col-md-4 col-sm-4 col-xs-4">
+		    		<a href="https://www.goibibo.com/" target="_blank">
+		    			<img class="api_img" src="images/goibibo.jpg" alt="GoIbiboimage">
+	    			</a>
+	    		</div>
+	    	</div>
+
+	    	<!-- Links to Developer's profiles. -->
+	    	<div class="developer col-lg-6 col-md-6 col-sm-12 col-xs-12">
+	    		<h3>About The Developer</h3>
+	    		<div class="col-lg-12 col-md-12 text-center developer-links">
+	    			<a href="http://aptr13.me" target="_blank" class="website">ApTr13</a>
+					<a href="https://github.com/ApTr13" target="_blank" class="github icon"></a>
+					<a href="https://www.facebook.com/people/Apurva-Tripathi/100012682908223" target="_blank" class="facebook icon"></a>
+					<a href="https://www.instagram.com/aptr13/" target="_blank" class="insta icon"></a>
+					<a href="mailto:apurvatripathi13@gmail.com" class="gmail icon"></a>
+				</div>
+	    	</div>
+	    </div>
+
+		<!-- Horizontal Line Break. -->
+	    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+	    	<hr>
+	    </div>
+		
+		<!-- Integrating all required Javascript files. -->
+		<script src="js/libs/jquery.min.js"></script>
+		<script src="js/libs/knockout.js"></script>
+		<script src="js/model.js"></script>
+		<script src="js/script.js"></script>
+		<script src="js/api.js"></script>
+	</div>
+	</body>
+</html>
