@@ -21,7 +21,7 @@ h4,p{
 	margin: 2px;
 	color: black;
 }
-ul li{
+#marker-links li{
 	list-style: none;
 	cursor: pointer;
 	line-height: 20px;
@@ -78,12 +78,22 @@ a:hover{
 }
 .hotelpic{
 	position: relative;
-	left: 4%;
+	left: 0%;
 	top: 12%;
 	width: 50px;
 	height:50px;
 	border-radius: 25px;
 	border: 2px solid white;
+	padding: 0px;
+}
+.hoteltext{
+	padding:0px;
+}
+.hoteltext a{
+	padding: 0px;
+	padding-top: 5px;
+}
+.hoteltext span{
 	padding: 0px;
 }
 .goibibo{
@@ -99,7 +109,7 @@ a:hover{
 	width: 200px;
 	margin:0 auto;
 }
-.infolinks{
+.infolinks,.wikilinks{
 	color: #01B394;
 }
 #content{
@@ -252,7 +262,7 @@ p.col-md-2, .hotelprice{
 
 @media only screen and (max-width : 768px) {
 	*{
-		font-size: 12px;
+		font-size: 10px;
 	}
 	.container{
 		width: 500px;
@@ -317,5 +327,8 @@ p.col-md-2, .hotelprice{
 	}
 	#content{
 		width:200px;
+	}
+	::-webkit-scrollbar {
+	    width: 5px;
 	}
 }
