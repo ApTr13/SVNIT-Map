@@ -3,6 +3,8 @@
 <html>
 	<head>
 		<title>SVNIT Map</title>
+		<meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 		<!-- Integrating all CSS files. -->
 		<link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
 		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
@@ -40,18 +42,19 @@
 	    	<hr>
 	    </div>
 
-		<!-- List of all Wikipedia Links related to Surat. -->
-		<div class="col-lg-3 col-md-3 col-sm-4 col-xs-12">
-			<div class="wikipedia">
-				<h3 id="wikipedia-header">Relevant Wikipedia Links</h3>
-				<ul class="row" id = "wikipedia-links"></ul>
-			</div>
-		</div>
-
 		<!-- List of all Hotels in Surat City, courtesy of GoIbibo. -->
-		<div class="col-lg-9 col-md-9 col-sm-8 col-xs-12 goibibo">
+		<div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 goibibo">
 			<h3 id="goibibo-header">Hotels Suggestions By GoIbibo</h3>
-			<ul class="row" id="goibibo-links"></ul>
+			<ul class="row" id="goibibo-links" data-bind="foreach: hotels">
+				<li class="col-lg-4 col-md-4 col-sm-6 col-xs-6 hotelbox">
+					<p class="col-lg-8 col-md-7 col-sm-7 col-xs-7 hoteltext">
+						<a class="col-lg-12 col-md-12 col-sm-12 col-xs-12" target="_blank" data-bind="attr: { href: link}, text: name"></a>
+						<span class="col-lg-12 col-md-12 col-sm-12 col-xs-12" data-bind="text: address"></span>
+					</p>
+					<p class="col-lg-2 col-md-2 col-sm-2 col-xs-2 hotelprice" data-bind="text: price"></p>
+					<img class="hotelpic col-lg-2 col-md-3 col-sm-3 col-xs-3" data-bind="attr: { src: image, alt: name}">
+				</li>
+			</ul>
 		</div>
 
 		<!-- Horizontal Line Break.. -->
@@ -103,8 +106,7 @@
 		<script src="js/libs/jquery.min.js"></script>
 		<script src="js/libs/knockout.js"></script>
 		<script src="js/model.js"></script>
-		<script src="js/script.js"></script>
-		<script src="js/api.js"></script>
+		<script async src="js/script.js"></script>
 	</div>
 	</body>
 </html>
