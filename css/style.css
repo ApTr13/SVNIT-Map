@@ -1,58 +1,75 @@
 /*Style.css for SVNIT MAP Application
 Made By - ApTr13*/
+
+/* CSS Validated with No Errors 
+By W3C CSS VALIDATION SERVICE
+http://jigsaw.w3.org/css-validator/
+*/
+
 /* CSS for primary tags and headings*/
 * {
 	box-sizing:border-box;
 	font-family: 'Space Mono', monospace;
 	color: white;
 }
+
 body {
 	background-color: #474747;
 }
-h1,h3{
+
+h1,
+h3 {
 	text-align:center;
 }
-h3{
+
+h3 {
 	margin: 5px;
 	margin-bottom: 10px;
 }
-h4,p{
+
+h4,
+p {
 	text-align: center;
 	margin: 2px;
 	color: black;
 }
-#marker-links li{
+
+.marker-links li {
 	list-style: none;
 	cursor: pointer;
 	line-height: 20px;
 }
-hr{
+
+hr {
 	border: 1px solid white;
 	height: 0px;
 }
-.locsearch{
+
+.locsearch {
 	color: black;
 	width: 160px;
 	margin-left: 10px;
 }
-.find{
+.find {
 	color: #85E7FF;
 	border: 3px solid #85E7FF;
 	background-color: #474747;
 }
+
 /*CSS for all API divisions*/
-.goibibo,.wikipedia,.markerlist{
+.goibibo,.wikipedia,.markerlist {
 	height: 315px;
 	border: 4px solid #FF940A;
 	border-radius: 30px;
     box-shadow: 4px 4px 4px white;
     z-index: 999;
 }
-.goibibo ul{
+
+.goibibo ul {
 	padding-left: 5px;
 }
 
-.hotelbox{
+.hotelbox {
 	border: 2px solid #CBFCD3;
 	height: 70px;
 	margin-left: 0px;
@@ -60,23 +77,28 @@ hr{
 	padding: 0px;
 	vertical-align: center;
 }
-.hotelbox{
+
+.hotelbox {
 	padding: 0px;
 	border-radius: 3px;
 }
+
 .hotelbox a{
 	padding: 0px;
 	padding-left: 10px;
 	padding-top: 5px;
 }
-a{
+
+a {
 	color: #85E7FF;
 }
-a:hover{
+
+a:hover {
 	text-decoration: none;
 	color: #A9B3FF;
 }
-.hotelpic{
+
+.hotelpic {
 	position: relative;
 	left: 0%;
 	top: 12%;
@@ -86,58 +108,75 @@ a:hover{
 	border: 2px solid white;
 	padding: 0px;
 }
-.hoteltext{
+
+.hoteltext {
 	padding:0px;
 }
-.hoteltext a{
+
+.hoteltext a {
 	padding: 0px;
 	padding-top: 5px;
 }
-.hoteltext span{
+
+.hoteltext span {
 	padding: 0px;
 }
-.goibibo{
+
+.goibibo {
 	overflow: hidden;
 }
-.goibibo:hover{
+
+.goibibo:hover {
 	overflow-y: scroll;
 }
-.markerlist{
+
+.markerlist {
 	height: 480px;
 }
-.info_img{
+
+.info_img {
 	width: 200px;
 	margin:0 auto;
 }
-.infolinks,.wikilinks{
+
+.infolinks,.wikilinks {
 	color: #01B394;
 }
-#content{
+
+.infocontent {
 	width:300px;
 }
-#map{
+
+.googlemap {
     height: 480px;
     border-radius: 30px;
     border: 5px solid #F9ECEC;
 }
-#marker-links{
+
+.marker-links {
 	padding-left: 3px;
 }
-#marker-links li{
+
+.marker-links li {
 	padding-left: 5px;
 	color: #FEEED5;
 }
-p.col-md-2, .hotelprice{
+
+p.col-md-2, .hotelprice {
 	padding:0px;
 	color: white;
 }
-.api_img{
+
+.api_img {
 	width: 100%;
 }
+
+
 /*Footer Section*/
-.developer div{
+.developer div {
 	background-color: white;
 }
+
 .icon {
 	color: white;
 	position: relative;
@@ -158,28 +197,35 @@ p.col-md-2, .hotelprice{
 	margin-left: 10px;
 	margin-right: 10px;
 }
-.courtesy{
+
+.courtesy {
 	border-right: 2px solid white;
 }
-.developer-links{
+
+.developer-links {
 	height: 60px;
 	border-radius: 20px;
 	margin: 0 auto;
 }
+
 .facebook {
 	background: url("social-1_logo-facebook.svg"); 
 }
+
 .github {
 	background: url("social-1_logo-github.svg"); 
 }
+
 .insta {
 	background: url("social-1_logo-instagram.svg"); 
 }
+
 .gmail {
 	background: url("gmail.png"); 
-  opacity: 0.8;
+	opacity: 0.8;
 }
-.website{
+
+.website {
 	display: inline;
 	top: 10px;
 	color: white;
@@ -191,20 +237,23 @@ p.col-md-2, .hotelprice{
 	margin-left: 10px;
 	margin-right: 10px;
 }
-.website:hover{
+.website:hover {
 	color: white;
 	text-decoration: none;
 }
+
+
 /*Formatting the Scrollbar*/
 ::-webkit-scrollbar {
     width: 12px;
     z-index: -99;
     opacity: 0;
 }
+
 ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
     -webkit-border-radius: 10px;
-    opacity: z-index: -99;
+    z-index: -99;
     border-radius: 10px;
 }
 
@@ -214,46 +263,53 @@ p.col-md-2, .hotelprice{
     background: #E0E0E0; 
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0); 
 }
-::-webkit-scrollbar-thumb:window-inactive {
-	background: #E0E0E0; 
-}
+
+
 
 @media only screen and (max-width : 1200px) {
-	*{
+	* {
 		font-size: 12px;
 	}
-	#marker-links li a{
+
+	.marker-links li a {
 		font-size: 12px;
 	}
-	.locsearch{
+
+	.locsearch {
 		width: 120px;
 	}
-	h3{
+
+	h3 {
 		font-size: 20px;
 	}
-	.hotelpic{
+
+	.hotelpic {
 		width: 40px;
 		height:40px;
 		border-radius: 20px;
 	}
-	#wikipedia-links{
+
+	#wikipedia-links {
 		padding-left: 24px;
 	}
 }
 
 @media only screen and (max-width : 992px) {
-	*{
+	* {
 		font-size: 11px;
 	}
-	.container{
+
+	.container {
 		width: 730px;
 	}
-	.courtesy{
+
+	.courtesy {
 		border-bottom: 2px solid white;
 		border-right: 0px ;
 		padding-bottom: 15px;
 	}
-	.developer{
+
+	.developer {
 		padding-bottom: 5px;
 		padding-top: 5px;
 	}
@@ -261,74 +317,114 @@ p.col-md-2, .hotelprice{
 }
 
 @media only screen and (max-width : 768px) {
-	*{
-		font-size: 10px;
+	* {
+		font-size: 11px;
 	}
-	.container{
+
+	.container {
 		width: 500px;
 	}
-	.markerlist,.wikipedia{
+
+	input {
+		height: 40px;
+	}
+
+	.markerlist,.wikipedia {
 		margin-bottom: 20px;
 	}
-	.wikipedia{
+
+	.wikipedia {
 		max-height: 250px;
 	}
-	form{
-		margin: 0 auto;
+
+	form {
+		position: relative;
+		left: 26%;
 	}
-	#marker-links li{
-		width: 49%;
+
+	.marker-links li {
+		width: 85%;
 		margin: 0px;
 		display: inline-block;
+		padding-left: 20px;
+		font-size: 15px;
 	}
-	.markerlist{
+	.markerlist {
 		height: 300px;
+		overflow-y: scroll;
+		overflow-x: hidden;
 	}
 		
 }
 
 @media only screen and (max-width : 500px) {
-	.container{
+	*{
+		font-size: 12px;
+	}
+
+	.container {
 		width: 350px;
 	}
-	.markerlist{
+
+	input {
+		height: 40px;
+	}
+
+	form {
+		position: relative;
+		left:12%;
+	}
+
+	.markerlist {
 		min-height: 100px;
 		overflow-y: scroll;
+		overflow-x: hidden;
 	}
-	#marker-links li{
-		width: 99%;
+
+	.marker-links li {
+		width: 95%;
 		margin: 0px;
 		display: inline-block;
-		padding-left: 15px;
+		padding-left: 10px;
+		font-size: 15px;
 	}
-	.wikipedia{
+
+	.wikipedia {
 		min-height: 80px;
 		overflow-y: scroll;
 		overflow-x: hidden;
 	}
-	.wikipedia li{
+
+	.wikipedia li {
 		padding-left: 15px;
 	}
+
 	.hotelbox{
 		width: 95%;
 		margin: 0px auto;
 	}
+
 	.hotelpic{
 		width: 50px;
 		height: 50px;
 		border-radius: 25px;
 	}
+
 	.courtesy div{
 		width: 100%;
 		margin-bottom: 10px;
 	}
+
 	.developer-links{
 		height: 100px;
 	}
-	#content{
-		width:200px;
+
+	.infocontent{
+		width:220px;
+		font-size: 13px;
 	}
+
 	::-webkit-scrollbar {
-	    width: 5px;
+	    width: 10px;
 	}
 }
