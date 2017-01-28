@@ -60,6 +60,11 @@ var Marker = function(data, gmap) {
             // $('#goibibo-header').text("NO HOTEL RESULTS FOUND");
             self.infocontent(self.infocontent() + 'COULD NOT GET Wikipedia Results</p></div></div>');
             console.log('Wikipedia Request Unsuccessful');
+
+            self.infowindow = new google.maps.InfoWindow({
+                content: self.infocontent()
+            });
+            clearTimeout(self.wikiRequestTimeout);
         }
     });
 
