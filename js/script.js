@@ -188,7 +188,7 @@ var ViewModel = function() {
     };
     console.log('ViewModel Working');
 
-    this.gourl = "http://developer.goibibo.com/api/voyager/get_hotels_by_cityid/?app_id=ead7e995&app_key=f086131766bdeeb9b60ab56a0d7b9372&city_id=1174752501934903427";
+    this.gourl = "https://developer.goibibo.com/api/voyager/get_hotels_by_cityid/?app_id=ead7e995&app_key=f086131766bdeeb9b60ab56a0d7b9372&city_id=1174752501934903427";
     this.hotels = ko.observableArray([]);
     // Setting Error function for GoIbibo
     this.goibiboRequestTimeout = setTimeout(function() {
